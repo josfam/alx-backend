@@ -23,12 +23,12 @@ class FIFOCache(BaseCaching):
         cache_data = self.cache_data
         if key is None or item is None:
             pass
-
-        cache_data[key] = item
-        if len(self.cache_data) > self.MAX_ITEMS:
-            keys = [key for key in cache_data.keys()]
-            del cache_data[keys[0]]
-            print('DISCARD: {}'.format(keys[0]))
+        else:
+            cache_data[key] = item
+            if len(self.cache_data) > self.MAX_ITEMS:
+                keys = [key for key in cache_data.keys()]
+                del cache_data[keys[0]]
+                print('DISCARD: {}'.format(keys[0]))
 
     def get(self, key):
         """Returns the value that is linked to a key in the cache.
