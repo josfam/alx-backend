@@ -1,3 +1,13 @@
+# node modules
+node_modules/
+
+# redis
+redis-6.0.10/
+redis-6.0.10.tar.gz
+
+# nvm
+.nvmrc
+
 # test files
 *-main.py
 
